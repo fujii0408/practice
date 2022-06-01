@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}" rel="stylesheet"/>
+<script th:href="@{/webjars/jquery/3.5.0/js/jquery.min.js}"></script>
+<script th:href="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
+<title>管理サイドログイン</title>
+<link rel="stylesheet" th:href="@{/css/adminLogin.css}">
+</head>
+<body>
+	<p th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']} != null" th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}" class="text-danger">
+	ログインエラーメッセージ
+	</p>
+	<form method="post" th:action="@{/admin/login}" class="form-input" th:object="${adminLoginForm}">
+		<div class="input-group input">
+			<p>管理画面</p>
+		</div>
+		<div class="input-group input">
+				<input type="text" name="email" class="form-control" placeholder="メールアドレス" th:field="*{email}" th:errorclass="is-invalid">
+				<div class="invalid-feedback" th:errors="*{email}"></div>
+		</div>
+		<div class="input-group input">
+				<input type="text" name="password" class="form-control" placeholder="パスワード" th:field="*{password}" th:errorclass="is-invalid">
+				<div class="invalid-feedback" th:errors="*{password}"></div>
+		</div>
+		<div>
+			<input type="submit" class="btn btn-primary" value="ログイン">
+		</div>
+	</form>
+</body>
+</html>

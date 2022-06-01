@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="jp.co.illmatics.apps.shopping.repository.AdminUserMapper">
+
+<select id="findAdminLogin" resultType="AdminUser">
+select email,
+password
+from admin_users
+where email = #{email}
+</select>
+
+</mapper>
