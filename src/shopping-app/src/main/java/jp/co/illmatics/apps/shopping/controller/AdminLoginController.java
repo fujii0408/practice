@@ -18,7 +18,7 @@ public class AdminLoginController {
 	
 	@GetMapping("/admin/login")
 	public String adminGetLogin(@ModelAttribute AdminLoginForm form) {
-		return "adminLogin";
+		return "admin/adminLogin";
 	}
 	
 //	@PostMapping("/admin/home")

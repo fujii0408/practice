@@ -39,8 +39,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //		ログイン画面の直リンクは許可し、それ以外の直リンクを無効にする
 		http.authorizeRequests()
 			.antMatchers("/admin/login").permitAll()
-			.antMatchers("/admin/home").permitAll()
-			.anyRequest().authenticated();
+			.antMatchers("/admin/home").permitAll();
+//			.anyRequest().authenticated();
 
 		http.formLogin()
 			.loginProcessingUrl("/admin/login")

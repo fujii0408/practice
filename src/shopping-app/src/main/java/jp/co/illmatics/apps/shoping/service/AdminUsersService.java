@@ -1,15 +1,14 @@
-package jp.co.illmatics.apps.shopping.repository;
+package jp.co.illmatics.apps.shoping.service;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Service;
 
 import jp.co.illmatics.apps.shopping.model.AdminUser;
 
-@Mapper
-public interface AdminUserMapper {
-	public AdminUser findAdminLogin(String email);
-	
+@Service
+public interface AdminUsersService {
+
 	public List<AdminUser> findAdminUsers();
 	
 	public List<AdminUser> searchAdminUsers(AdminUser adminUser);

@@ -28,3 +28,5 @@ spring:
         dialect: org.hibernate.dialect.Oracle12cDialect
 #  flyway:
 #    validateOnMigrate=false
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml

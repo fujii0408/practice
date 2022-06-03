@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.themeleaf.org/extras/spring-security"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="~{admin/layout/adminLayout}">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}" rel="stylesheet"/>
+<script th:href="@{/webjars/jquery/3.5.0/js/jquery.min.js}"></script>
+<script th:href="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
+<title>管理サイドホーム</title>
+<!--link rel="stylesheet" th:href="@{/css/adminHome.css}"-->
+</head>
+<body>
+<div layout:fragment="content">
+<div class="row">
+		<div class="col-xl-12 table-responsive-xl">
+			<table class="table table-striped text-nowrap">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>名称</th>
+						<th>メールアドレス</th>
+						<th>権限</th>
+					</tr>
+				</thead>
+					<tr th:each="item : ${adminUsers}">
+						<td th:text="${item.id}" class="align-middle"></td>
+						<td th:text="${item.name}" class="align-middle"></td>
+						<td th:text="${item.email}" class="align-middle"></td>
+						<td th:text="${item.is_owner}" class="align-middle"></td>
+					</tr>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>

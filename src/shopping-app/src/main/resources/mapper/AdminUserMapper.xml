@@ -11,4 +11,16 @@ from admin_users
 where email = #{email}
 </select>
 
+<select id="findAdminUsers" resultType="jp.co.illmatics.apps.shopping.model.AdminUser">
+select id, name, email, is_owner
+from admin_users
+</select>
+
+<select id="searchAdminUser" resultType="jp.co.illmatics.apps.shopping.model.AdminUser">
+select id, name, email, is_owner
+from admin_users
+where name like '%#{searchName}%'
+or email like '%#{searchEmail}%'
+</select>
+
 </mapper>

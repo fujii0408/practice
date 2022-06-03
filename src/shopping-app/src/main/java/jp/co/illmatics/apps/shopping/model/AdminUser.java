@@ -11,13 +11,15 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import lombok.Data;
 
-@SuppressWarnings("serial")
 @Data
 public class AdminUser implements UserDetails {
-//	@Id
-//	private Integer id;
+private static final long serialVersionUID = 1L;
+	//	@Id
+	private Integer id;
+	private String name;
 	private String email;
 	private String password;
+	private Integer is_owner;
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -47,6 +49,6 @@ public class AdminUser implements UserDetails {
 	@Override
 	public boolean isEnabled() {
 		// TODO 自動生成されたメソッド・スタブ
-		return false;
+		return true;
 	}
 }
