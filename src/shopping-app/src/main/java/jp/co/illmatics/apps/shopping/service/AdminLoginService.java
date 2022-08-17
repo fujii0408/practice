@@ -1,4 +1,4 @@
-package jp.co.illmatics.apps.shoping.service;
+package jp.co.illmatics.apps.shopping.service;
 
 import org.springframework.stereotype.Service;
 

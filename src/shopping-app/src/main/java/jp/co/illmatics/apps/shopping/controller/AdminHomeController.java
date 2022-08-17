@@ -8,9 +8,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import jp.co.illmatics.apps.shoping.service.AdminUsersService;
 import jp.co.illmatics.apps.shopping.form.SearchForm;
 import jp.co.illmatics.apps.shopping.model.AdminUser;
+import jp.co.illmatics.apps.shopping.service.AdminUsersService;
 
 @Controller
 public class AdminHomeController {
@@ -31,7 +31,7 @@ public class AdminHomeController {
 			
 //			検索された名前orメールアドレスに一致するユーザーのリストをセット
 			List<AdminUser> searchAdminUsers = adminUsersService.searchAdminUsers(adminUser);
-			model.addAttribute("SearchAdminUsers", searchAdminUsers);
+			model.addAttribute("searchAdminUsers", searchAdminUsers);
 		}
 		
 		return "admin/adminHome";

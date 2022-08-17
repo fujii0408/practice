@@ -1,13 +1,13 @@
-package jp.co.illmatics.apps.shoping.service.serviceImpl;
+package jp.co.illmatics.apps.shopping.service.serviceImpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import jp.co.illmatics.apps.shoping.service.AdminUsersService;
 import jp.co.illmatics.apps.shopping.model.AdminUser;
 import jp.co.illmatics.apps.shopping.repository.AdminUserMapper;
+import jp.co.illmatics.apps.shopping.service.AdminUsersService;
 
 @Service
 public class AdminUsersServiceImpl implements AdminUsersService {

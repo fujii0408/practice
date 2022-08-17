@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import jp.co.illmatics.apps.shoping.service.AdminUsersService;
 import jp.co.illmatics.apps.shopping.model.AdminUser;
+import jp.co.illmatics.apps.shopping.service.AdminUsersService;
 
 @Controller
 public class AdminUsersController {

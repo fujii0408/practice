@@ -4,7 +4,7 @@
 
 <mapper namespace="jp.co.illmatics.apps.shopping.repository.AdminUserMapper">
 
-<select id="findAdminLogin" resultType="AdminUser">
+<select id="findAdminLogin" resultType="jp.co.illmatics.apps.shopping.model.AdminUser">
 select email,
 password
 from admin_users
@@ -16,7 +16,7 @@ select id, name, email, is_owner
 from admin_users
 </select>
 
-<select id="searchAdminUser" resultType="jp.co.illmatics.apps.shopping.model.AdminUser">
+<select id="searchAdminUsers" resultType="jp.co.illmatics.apps.shopping.model.AdminUser">
 select id, name, email, is_owner
 from admin_users
 where name like '%#{searchName}%'
