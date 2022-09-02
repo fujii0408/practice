@@ -20,6 +20,10 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
+//application {
+//    applicationDefaultJvmArgs = ['--add-opens', 'java.base/jdk.internal.loader=ALL-UNNAMED']
+//}
+
 repositories {
 	mavenCentral()
   // maven {
