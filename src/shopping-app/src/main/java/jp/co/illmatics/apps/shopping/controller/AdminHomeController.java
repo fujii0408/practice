@@ -21,11 +21,11 @@ public class AdminHomeController {
 	@GetMapping("/admin/home")
 	public String getAdminHome(Model model, AdminUser adminUser, @ModelAttribute SearchForm form) {
 		if(form == null) {
-//			ユーザーのリストを取得してセット
+//			検索されなかった場合、ユーザーのリストを取得してセット
 			List<AdminUser> adminUsers = adminUsersService.findAdminUsers();
 			model.addAttribute("adminUsers", adminUsers);
 		} else if(form != null) {
-//			adminUserにformで渡されたnameとemailをセット
+//			検索された場合、adminUserにformで渡されたnameとemailをセット
 			adminUser.setName(form.getSearchName());
 			adminUser.setEmail(form.getSearchEmail());
 			

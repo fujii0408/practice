@@ -25,4 +25,9 @@ public class AdminUsersServiceImpl implements AdminUsersService {
 		return adminUserMapper.searchAdminUsers(adminUser);
 	}
 
+	@Override
+	public void updateAdminUser(String id) {
+		adminUserMapper.updateAdminUser(id);
+	}
+
 }

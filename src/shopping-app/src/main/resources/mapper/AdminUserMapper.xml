@@ -23,4 +23,13 @@ where name like '%#{searchName}%'
 or email like '%#{searchEmail}%'
 </select>
 
+<update id="updateAdminUser">
+update admin_users
+set name = #{name}, 
+email = #{email}, 
+password = #{password}, 
+is_owner = #{is_owner}
+where id = #{id} 
+</update>
+
 </mapper>

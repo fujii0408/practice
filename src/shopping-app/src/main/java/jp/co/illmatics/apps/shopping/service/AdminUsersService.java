@@ -12,4 +12,6 @@ public interface AdminUsersService {
 	public List<AdminUser> findAdminUsers();
 	
 	public List<AdminUser> searchAdminUsers(AdminUser adminUser);
+	
+	public void updateAdminUser(String id);
 }
