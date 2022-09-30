@@ -184,10 +184,12 @@ Flywayで行うため、不要
   * ログイン
   * ログアウト
 認証用テストユーザ
-||ユーザ名|パスワード|
+
+|フロント/管理|ユーザ名|パスワード|
 |---|---|---|
 |フロントサイド|user@a.com|pass|
 |管理サイド|admin@a.com|pass|
+
 上記の実装済み機能以外について [設計書](https://drive.google.com/drive/folders/1VRGeN6YdkE5EmyPEBiIkk0y2TneF3RH2?usp=sharing) を参考に実装を行う。
 管理サイドから実装するのがおすすめ。
 ブランチモデルは [GitHub Flow](https://tracpath.com/bootcamp/learning_git_github_flow.html) を利用する。
@@ -195,10 +197,10 @@ Flywayで行うため、不要
 PullRequestは機能単位(商品管理、商品カテゴリ管理...)とする。
 masterへのマージはGitHubでPullRequestを利用し、有識者のコードレビュー承認後にマージすること。
 # リファレンスなど
-[Spring](hhttps://spring.pleiades.io)
-[Java](https://kazurof.github.io/GoogleJavaStyle-ja/)
-[Bootstrap4.4](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
-[FontAwesome](https://fontawesome.com/)
-[Git](https://git-scm.com/book/ja/v2)
-[設計書の例](https://pm-rasinban.com/bd-write)
-[テスト設計書](https://docs.google.com/spreadsheets/d/1eAcfaLHgvd0X8Bomp7Be1qAVlkXLonyHEdmTw5qP91s/edit?usp=sharing)
+* [Spring](hhttps://spring.pleiades.io)
+* [Java](https://kazurof.github.io/GoogleJavaStyle-ja/)
+* [Bootstrap4.4](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+* [FontAwesome](https://fontawesome.com/)
+* [Git](https://git-scm.com/book/ja/v2)
+* [設計書の例](https://pm-rasinban.com/bd-write)
+* [テスト設計書](https://docs.google.com/spreadsheets/d/1eAcfaLHgvd0X8Bomp7Be1qAVlkXLonyHEdmTw5qP91s/edit?usp=sharing)
