@@ -15,5 +15,9 @@ public interface AdminUserMapper {
 	public List<AdminUser> searchAdminUsers(AdminUser adminUser);
 	
 	public void updateAdminUser(String id);
+	
+	public void insertAdminUser(AdminUser adminUser);
+	
+	public AdminUser findById(String id);
 
 }

@@ -14,18 +14,19 @@ layout:decorate="~{admin/layout/adminLayout}">
 <body>
 <div layout:fragment="content">
 <div class="row">
-		<form method="get" th:action="@{/list}" class="float-right" th:object="${searchForm}">
-			<input type="text" name="searchWord" th:field="*{searchWord}" class="list-form">
-			<input type="submit" value="検索" class="list-form">
-		</form>
 		<div class="col-xl-12 table-responsive-xl">
+			<div>
+				<a>一覧</a>
+				<div th:href="@{/admin/users/1}" class="btn-primary">編集</div>
+				<div th:href="@{/admin/}" class="btn-danger">削除</div>
+			</div>
 			<table class="table table-striped text-nowrap">
 				<thead>
 					<tr>
 						<th>ID</th>
 						<th>名称</th>
 						<th>メールアドレス</th>
-						<th>権限</th>
+						<th>イメージ</th>
 					</tr>
 				</thead>
 					<tr th:each="item : ${adminUsers}">

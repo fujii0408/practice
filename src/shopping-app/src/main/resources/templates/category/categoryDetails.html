@@ -8,31 +8,30 @@ layout:decorate="~{admin/layout/adminLayout}">
 <link th:href="@{/webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}" rel="stylesheet"/>
 <script th:href="@{/webjars/jquery/3.5.0/js/jquery.min.js}"></script>
 <script th:href="@{/webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
-<title>管理者管理画面一覧</title>
+<title>商品カテゴリ管理画面詳細</title>
 <!--link rel="stylesheet" th:href="@{/css/adminHome.css}"-->
 </head>
 <body>
 <div layout:fragment="content">
 <div class="row">
-		<form method="get" th:action="@{/list}" class="float-right" th:object="${searchForm}">
-			<input type="text" name="searchWord" th:field="*{searchWord}" class="list-form">
-			<input type="submit" value="検索" class="list-form">
-		</form>
 		<div class="col-xl-12 table-responsive-xl">
+			<div>
+				<a>一覧</a>
+				<div th:href="@{/admin/categories/1}" class="btn">一覧</div>
+				<div th:href="@{/categories/}" class="btn-danger">編集</div>
+			</div>
 			<table class="table table-striped text-nowrap">
 				<thead>
 					<tr>
 						<th>ID</th>
 						<th>名称</th>
-						<th>メールアドレス</th>
-						<th>権限</th>
+						<th>並び順番号</th>
 					</tr>
 				</thead>
 					<tr th:each="item : ${adminUsers}">
 						<td th:text="${item.id}" class="align-middle"></td>
 						<td th:text="${item.name}" class="align-middle"></td>
-						<td th:text="${item.email}" class="align-middle"></td>
-						<td th:text="${item.is_owner}" class="align-middle"></td>
+						<td th:text="${item.sortNumber}" class="align-middle"></td>
 					</tr>
 			</table>
 		</div>

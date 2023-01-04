@@ -10,7 +10,7 @@ layout:decorate="~{layout/layout}">
 <div layout:fragment="content">
 	<div class="text-left register-form">
 		<div class="col-md">
-			<form method="post" th:action="@{/admin/admin_users/create}" th:object="${registerForm}">
+			<form method="post" th:action="@{/admin/users/create}" th:object="${userForm}">
 				<div class="form-group">
 					<label class="label-primary">名称</label>
 					<input type="text" name="name" class="form-control" th:field="*{name}" th:errorclass="is-invalid">
@@ -18,8 +18,8 @@ layout:decorate="~{layout/layout}">
 				</div>
 				<div class="form-group">
 					<label class="">メールアドレス</label>
-					<input type="text" name="address" class="form-control" th:field="*{address}" th:errorclass="is-invalid">
-					<div class="invalid-feedback" th:errors="*{address}"></div>
+					<input type="text" name="email" class="form-control" th:field="*{email}" th:errorclass="is-invalid">
+					<div class="invalid-feedback" th:errors="*{email}"></div>
 				</div>
 				<div class="form-group">
 					<label class="">パスワード</label>
@@ -32,7 +32,7 @@ layout:decorate="~{layout/layout}">
 					<div class="invalid-feedback" th:errors="*{password}"></div>
 				</div>
 				<input type="submit" value="作成" class="btn btn-primary">
-				<a th:href="@{/admin/home}" class="btn btn-secondary">キャンセル</a>
+				<a th:href="@{/admin/user}" class="btn btn-secondary">キャンセル</a>
 			</form>
 		</div>
 	</div>

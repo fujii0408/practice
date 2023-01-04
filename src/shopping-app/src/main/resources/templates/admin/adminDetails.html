@@ -14,11 +14,12 @@ layout:decorate="~{admin/layout/adminLayout}">
 <body>
 <div layout:fragment="content">
 <div class="row">
-		<form method="get" th:action="@{/list}" class="float-right" th:object="${searchForm}">
-			<input type="text" name="searchWord" th:field="*{searchWord}" class="list-form">
-			<input type="submit" value="検索" class="list-form">
-		</form>
 		<div class="col-xl-12 table-responsive-xl">
+			<div>
+				<a>一覧</a>
+				<div class="btn-primary">編集</div>
+				<div class="btn-danger">削除</div>
+			</div>
 			<table class="table table-striped text-nowrap">
 				<thead>
 					<tr>
